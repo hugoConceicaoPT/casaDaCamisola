@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
 </head>
 
 <body>
@@ -33,9 +35,10 @@
                     </li>
 
                     <li id="underline-link" class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link" onclick="toggleIcon(this)" href="" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Futebol
+                            <i id="caretIcon" class="fas fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="clubes-ingleses-page-1.html">Clubes Ingleses</a></li>
@@ -53,46 +56,49 @@
                     </li>
 
                     <li id="underline-link" class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link" onclick="toggleIcon(this)" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Basquetebol
+                            <i id="caretIcon" class="fas fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="nba-page-1.html">Clubes NBA</a></li>
-                            <li><a class="dropdown-item" href="#">Calções NBA</a></li>
+                            <li><a class="dropdown-item" href="calcoes-nba-page-1.html">Calções NBA</a></li>
                         </ul>
                     </li>
 
                     <li id="underline-link" class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link" onclick="toggleIcon(this)" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Retro
+                            <i id="caretIcon" class="fas fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Clubes</a></li>
-                            <li><a class="dropdown-item" href="#">Seleções</a></li>
+                            <li><a class="dropdown-item" href="retro-clubes-page-1.html">Clubes</a></li>
+                            <li><a class="dropdown-item" href="retro-selecoes-page-1.html">Seleções</a></li>
                         </ul>
                     </li>
 
                     <li id="underline-link" class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link" onclick="toggleIcon(this)" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Criança
+                            <i id="caretIcon" class="fas fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Clubes</a></li>
-                            <li><a class="dropdown-item" href="#">Seleções</a></li>
+                            <li><a class="dropdown-item" href="crianca-clubes-page-1.html">Clubes</a></li>
+                            <li><a class="dropdown-item" href="crianca-selecoes-page-1.html">Seleções</a></li>
                         </ul>
                     </li>
 
                     <li id="underline-link" class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link" onclick="toggleIcon(this)" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Fatos de treino
+                            <i id="caretIcon" class="fas fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Clubes</a></li>
-                            <li><a class="dropdown-item" href="#">Seleções</a></li>
+                            <li><a class="dropdown-item" href="fatos-treino-ver-tudo-page-1.html">Ver Tudo</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -263,7 +269,6 @@
     <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center pb-5">
             <li class="page-item"><a class="page-link" href="selecoes-page-2.html">Previous</a></li>
-            <li class="page-item"><a class="page-link" href="selecoes-page-2.html">2</a></li>
             <li class="page-item"><a class="page-link" href="selecoes-page-3.html">3</a></li>
             <li class="page-item"><a class="page-link" href="selecoes-page-4.html">4</a></li>
             <li class="page-item"><a class="page-link" href="selecoes-page-4.html">Next</a></li>
@@ -341,6 +346,42 @@
                 navbarToggle.classList.remove('expanded');
             }
         });
+    </script>
+
+    <script>
+        function toggleIcon(element) {
+            var arrowIcon = element.querySelector('i');
+            // Verifica se o ícone está para baixo
+            if (arrowIcon.classList.contains('fa-caret-down')) {
+                // Se estiver para baixo, torna-o para cima
+                arrowIcon.classList.remove('fa-caret-down');
+                arrowIcon.classList.add('fa-caret-up');
+            } else {
+                // Se estiver para cima, torna-o para baixo
+                arrowIcon.classList.remove('fa-caret-up');
+                arrowIcon.classList.add('fa-caret-down');
+            }
+            // Fecha outros menus ao abrir um
+            closeOtherDropdowns(element);
+        }
+
+        function closeOtherDropdowns(clickedElement) {
+            // Obtém todos os elementos de menu dropdown
+            var dropdownMenus = document.querySelectorAll('.nav-item.dropdown');
+            // Itera sobre cada menu dropdown
+            dropdownMenus.forEach(function(menu) {
+                // Verifica se o menu atual não é o mesmo que o clicado
+                if (menu !== clickedElement.parentElement) {
+                    // Obtém o ícone de seta do menu atual
+                    var caretIcon = menu.querySelector('i');
+                    // Se o menu atual estiver ativo, desativa seu ícone
+                    if (caretIcon.classList.contains('fa-caret-up')) {
+                        caretIcon.classList.remove('fa-caret-up');
+                        caretIcon.classList.add('fa-caret-down');
+                    }
+                }
+            });
+        }
     </script>
 
     <script src="js/bootstrap.bundle.min.js"></script>

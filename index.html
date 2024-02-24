@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CasaDaCamisola</title>
     <link rel="icon" type="image/png" href="imgs/logo.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" async> 
     <link rel="stylesheet" href="app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;700&display=swap" rel="preconnect">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
 </head>
 
 <body>
@@ -33,9 +35,10 @@
                     </li>
 
                     <li id="underline-link" class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link" onclick="toggleIcon(this)" href="" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Futebol
+                            <i id="caretIcon" class="fas fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="clubes-ingleses-page-1.html">Clubes Ingleses</a></li>
@@ -53,46 +56,49 @@
                     </li>
 
                     <li id="underline-link" class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link" onclick="toggleIcon(this)" href="" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Basquetebol
+                            <i id="caretIcon" class="fas fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="nba-page-1.html">Clubes NBA</a></li>
-                            <li><a class="dropdown-item" href="#">Calções NBA</a></li>
+                            <li><a class="dropdown-item" href="calcoes-nba-page-1.html">Calções NBA</a></li>
                         </ul>
                     </li>
 
                     <li id="underline-link" class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link" onclick="toggleIcon(this)" href="" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Retro
+                            <i id="caretIcon" class="fas fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Clubes</a></li>
-                            <li><a class="dropdown-item" href="#">Seleções</a></li>
+                            <li><a class="dropdown-item" href="retro-clubes-page-1.html">Clubes</a></li>
+                            <li><a class="dropdown-item" href="retro-selecoes-page-1.html">Seleções</a></li>
                         </ul>
                     </li>
 
                     <li id="underline-link" class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link" onclick="toggleIcon(this)" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Criança
+                            <i id="caretIcon" class="fas fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Clubes</a></li>
-                            <li><a class="dropdown-item" href="#">Seleções</a></li>
+                            <li><a class="dropdown-item" href="crianca-clubes-page-1.html">Clubes</a></li>
+                            <li><a class="dropdown-item" href="crianca-selecoes-page-1.html">Seleções</a></li>
                         </ul>
                     </li>
 
                     <li id="underline-link" class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link" onclick="toggleIcon(this)" href="" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Fatos de treino
+                            <i id="caretIcon" class="fas fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Clubes</a></li>
-                            <li><a class="dropdown-item" href="#">Seleções</a></li>
+                            <li><a class="dropdown-item" href="fatos-treino-ver-tudo-page-1.html">Clubes</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -123,21 +129,21 @@
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="imgs/promo_1.jpg" class="d-block w-100" alt="...">
+                            <img rel="preload" as="image" src="imgs/promo_1.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption">
                                 <h2>Promoções</h2>
                                 <p class="lead">25% na segunda camisola na compra de duas</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="imgs/promo_2.jpg" class="d-block w-100" alt="...">
+                            <img rel="preload" as="image" src="imgs/promo_2.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption">
                                 <h2>RETRO</h2>
                                 <p class="lead">CAMISOLAS COM HISTÓRIA</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="imgs/promo_3.jpg" class="d-block w-100" alt="...">
+                            <img rel="preload" as="image" src="imgs/promo_3.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption">
                                 <h2>FATOS DE TREINO</h2>
                                 <p class="lead">NOVA COLEÇÃO NÃO PERCA</p>
@@ -164,32 +170,32 @@
         <div class="row">
             <div class="col-6 col-md-3 mb-5">
                 <div class="position-relative">
-                    <img class="img-fluid" src="imgs/resto_da_europa/benfica-principal.jpg" alt="">
-                    <img class="img-fluid img-hover" src="imgs/resto_da_europa/benfica-back-principal.jpeg" alt="">
+                    <img loading="lazy" class="img-fluid" src="imgs/resto_da_europa/benfica-principal.jpg" alt="">
+                    <img loading="lazy" class="img-fluid img-hover" src="imgs/resto_da_europa/benfica-back-principal.jpeg" alt="">
                     <p class="lead text-center">Benfica Home 23/24</p>
                 </div>
             </div>
 
             <div class="col-6 col-md-3 mb-5">
                 <div class="position-relative">
-                    <img class="img-fluid" src="imgs/clubes_ingleses/city-principal.jpg" alt="">
-                    <img class="img-fluid img-hover" src="imgs/clubes_ingleses/city-back-principal.jpeg" alt="">
+                    <img loading="lazy" class="img-fluid" src="imgs/clubes_ingleses/city-principal.jpg" alt="">
+                    <img loading="lazy" class="img-fluid img-hover" src="imgs/clubes_ingleses/city-back-principal.jpeg" alt="">
                     <p class="lead text-center">Manchester City Home 23/24</p>
                 </div>
             </div>
 
             <div class="col-6 col-md-3 mb-5">
                 <div class="position-relative">
-                    <img class="img-fluid" src="imgs/resto_da_europa/sporting-principal.jpg" alt="">
-                    <img class="img-fluid img-hover" src="imgs/resto_da_europa/sporting-back-principal.jpeg" alt="">
+                    <img loading="lazy" class="img-fluid" src="imgs/resto_da_europa/sporting-principal.jpg" alt="">
+                    <img loading="lazy" class="img-fluid img-hover" src="imgs/resto_da_europa/sporting-back-principal.jpeg" alt="">
                     <p class="lead text-center">Sporting Home 23/24</p>
                 </div>
             </div>
 
             <div class="col-6 col-md-3 mb-5">
                 <div class="position-relative">
-                    <img class="img-fluid" src="imgs/resto_da_europa/sporting-terceira.jpg" alt="">
-                    <img class="img-fluid img-hover" src="imgs/resto_da_europa/sporting-back-terceira.jpeg" alt="">
+                    <img loading="lazy" class="img-fluid" src="imgs/resto_da_europa/sporting-terceira.jpg" alt="">
+                    <img loading="lazy" class="img-fluid img-hover" src="imgs/resto_da_europa/sporting-back-terceira.jpeg" alt="">
                     <p class="lead text-center">Sporting Third Away 23/24</p>
                 </div>
             </div>
@@ -198,32 +204,32 @@
         <div class="row">
             <div class="col-6 col-md-3 mb-5">
                 <div class="position-relative">
-                    <img class="img-fluid" src="imgs/resto_da_america/inter-miami-away.jpeg" alt="">
-                    <img class="img-fluid img-hover" src="imgs/resto_da_america/inter-miami-back-away.jpeg" alt="">
+                    <img loading="lazy" class="img-fluid" src="imgs/resto_da_america/inter-miami-away.jpeg" alt="">
+                    <img loading="lazy" class="img-fluid img-hover" src="imgs/resto_da_america/inter-miami-back-away.jpeg" alt="">
                     <p class="lead text-center">Inter Miami Away 23/24</p>
                 </div>
             </div>
 
             <div class="col-6 col-md-3 mb-5">
                 <div class="position-relative">
-                    <img class="img-fluid" src="imgs/clubes_asiaticos/Al-Nassr-third-away.jpeg" alt="">
-                    <img class="img-fluid img-hover" src="imgs/clubes_asiaticos/Al-Nassr-back-third-away.jpeg" alt="">
+                    <img loading="lazy" class="img-fluid" src="imgs/clubes_asiaticos/Al-Nassr-third-away.jpeg" alt="">
+                    <img loading="lazy" class="img-fluid img-hover" src="imgs/clubes_asiaticos/Al-Nassr-back-third-away.jpeg" alt="">
                     <p class="lead text-center">Al Nassr Third Away 23/24</p>
                 </div>
             </div>
 
             <div class="col-6 col-md-3 mb-5">
                 <div class="position-relative">
-                    <img class="img-fluid" src="imgs/clubes_espanhois/Real-Madrid-principal.jpeg" alt="">
-                    <img class="img-fluid img-hover" src="imgs/clubes_espanhois/Real-Madrid-back-principal.jpeg" alt="">
+                    <img loading="lazy" class="img-fluid" src="imgs/clubes_espanhois/Real-Madrid-principal.jpeg" alt="">
+                    <img loading="lazy" class="img-fluid img-hover" src="imgs/clubes_espanhois/Real-Madrid-back-principal.jpeg" alt="">
                     <p class="lead text-center">Real Madrid Home 23/24</p>
                 </div>
             </div>
 
             <div class="col-6 col-md-3 mb-5">
                 <div class="position-relative">
-                    <img class="img-fluid" src="imgs/clubes_espanhois/barcelona-principal.jpeg" alt="">
-                    <img class="img-fluid img-hover" src="imgs/clubes_espanhois/barcelona-back-principal.jpeg" alt="">
+                    <img loading="lazy" class="img-fluid" src="imgs/clubes_espanhois/barcelona-principal.jpeg" alt="">
+                    <img loading="lazy" class="img-fluid img-hover" src="imgs/clubes_espanhois/barcelona-back-principal.jpeg" alt="">
                     <p class="lead text-center">Barcelona Home 23/24</p>
                 </div>
             </div>
@@ -238,32 +244,32 @@
         <div class="row">
             <div class="col-6 col-md-3 mb-5">
                 <div class="position-relative">
-                    <img class="img-fluid" src="imgs/concept_kits/psg-concept.jpg" alt="">
-                    <img class="img-fluid img-hover" src="imgs/concept_kits/psg-back-concept.jpg" alt="">
+                    <img loading="lazy" class="img-fluid" src="imgs/concept_kits/psg-concept.jpg" alt="">
+                    <img loading="lazy" class="img-fluid img-hover" src="imgs/concept_kits/psg-back-concept.jpg" alt="">
                     <p class="lead text-center">PSG Special Edition 22/23</p>
                 </div>
             </div>
 
             <div class="col-6 col-md-3 mb-5">
                 <div class="position-relative">
-                    <img class="img-fluid" src="imgs/concept_kits/fluminense-concept.jpg" alt="">
-                    <img class="img-fluid img-hover" src="imgs/concept_kits/fluminense-back-concept.jpg" alt="">
+                    <img loading="lazy" class="img-fluid" src="imgs/concept_kits/fluminense-concept.jpg" alt="">
+                    <img loading="lazy" class="img-fluid img-hover" src="imgs/concept_kits/fluminense-back-concept.jpg" alt="">
                     <p class="lead text-center">Fluminense Special Edition 21/22</p>
                 </div>
             </div>
 
             <div class="col-6 col-md-3 mb-5">
                 <div class="position-relative">
-                    <img class="img-fluid" src="imgs/concept_kits/real-madrid-concept.jpg" alt="">
-                    <img class="img-fluid img-hover" src="imgs/concept_kits/real-madrid-back-concept.jpg" alt="">
+                    <img loading="lazy" class="img-fluid" src="imgs/concept_kits/real-madrid-concept.jpg" alt="">
+                    <img loading="lazy" class="img-fluid img-hover" src="imgs/concept_kits/real-madrid-back-concept.jpg" alt="">
                     <p class="lead text-center">Real Madrid Special Edition 22/23</p>
                 </div>
             </div>
 
             <div class="col-6 col-md-3 mb-5">
                 <div class="position-relative">
-                    <img class="img-fluid" src="imgs/concept_kits/portugal-concept.jpg" alt="">
-                    <img class="img-fluid img-hover" src="imgs/concept_kits/portugal-back-concept.jpg" alt="">
+                    <img loading="lazy" class="img-fluid" src="imgs/concept_kits/portugal-concept.jpg" alt="">
+                    <img loading="lazy" class="img-fluid img-hover" src="imgs/concept_kits/portugal-back-concept.jpg" alt="">
                     <p class="lead text-center">Portugal Special Edition 2022</p>
                 </div>
             </div>
@@ -363,7 +369,42 @@
         });
     </script>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleIcon(element) {
+            var arrowIcon = element.querySelector('i');
+            // Verifica se o ícone está para baixo
+            if (arrowIcon.classList.contains('fa-caret-down')) {
+                // Se estiver para baixo, torna-o para cima
+                arrowIcon.classList.remove('fa-caret-down');
+                arrowIcon.classList.add('fa-caret-up');
+            } else {
+                // Se estiver para cima, torna-o para baixo
+                arrowIcon.classList.remove('fa-caret-up');
+                arrowIcon.classList.add('fa-caret-down');
+            }
+            // Fecha outros menus ao abrir um
+            closeOtherDropdowns(element);
+        }
+
+        function closeOtherDropdowns(clickedElement) {
+            // Obtém todos os elementos de menu dropdown
+            var dropdownMenus = document.querySelectorAll('.nav-item.dropdown');
+            // Itera sobre cada menu dropdown
+            dropdownMenus.forEach(function(menu) {
+                // Verifica se o menu atual não é o mesmo que o clicado
+                if (menu !== clickedElement.parentElement) {
+                    // Obtém o ícone de seta do menu atual
+                    var caretIcon = menu.querySelector('i');
+                    // Se o menu atual estiver ativo, desativa seu ícone
+                    if (caretIcon.classList.contains('fa-caret-up')) {
+                        caretIcon.classList.remove('fa-caret-up');
+                        caretIcon.classList.add('fa-caret-down');
+                    }
+                }
+            });
+        }
+    </script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
 
 </body>
 

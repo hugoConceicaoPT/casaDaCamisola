@@ -32,6 +32,7 @@ html,body {
 }
 
 
+
 #mainNavBar .instagram:hover{
     text-decoration: none;
 }
@@ -55,8 +56,14 @@ html,body {
 }
 
 #underline-link .dropdown-item:hover {
-    text-decoration: black underline;
+    background-color: #14213d;
+    text-decoration: none;
+    color: #F3F3F3;
     font-weight: 500;
+}
+
+#underline-link i {
+    padding-left: 5px;
 }
 
 .no-padding {
@@ -68,6 +75,35 @@ html,body {
     font-size: 1.5rem;
     white-space: nowrap;
 }
+
+#faqs {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+#faqs h1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+#faqs h2 {
+    margin-bottom: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+#faqs h3 {
+    font-weight: 500;
+    text-decoration: underline black;
+}
+
+#faqs p {
+    font-weight: 600;
+    margin-bottom: 5rem;
+}
+
 
 /* Slide de imagens  */
 
