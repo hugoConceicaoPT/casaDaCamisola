@@ -70,7 +70,9 @@ html,body {
     padding:0;
 }
 
+
 #alertas p{
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
     white-space: nowrap;
@@ -141,6 +143,7 @@ html,body {
 }
 
 #carousel .carousel-caption h2 {
+    font-family: "Montserrat", sans-serif;
     font-size: 2rem;
     font-weight: 700;
 }
@@ -148,9 +151,10 @@ html,body {
 /* imagens a aparecer em uma espécie de grid/catalogo */
 
 #formato-catalogo h3 {
+    font-family: "Montserrat", sans-serif;
     padding-bottom: 0.125rem;
     padding-left: 1rem;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 20px;
     white-space: nowrap;
 }
@@ -201,6 +205,11 @@ html,body {
 
 #nao-disponiveis {
     margin-bottom: 5rem;
+}
+
+#nao-disponiveis h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
 }
 
 #nao-disponiveis video {
