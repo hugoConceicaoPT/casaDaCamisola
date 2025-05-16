@@ -1,11 +1,10 @@
 # Football Shirt Catalog
 
-This is an interactive football shirt catalog built using **HTML**, **CSS**, and **JavaScript**. The goal of the project is to showcase a collection of football shirts, allowing users to browse by club, season, or style in a visually engaging and user-friendly way.
+This is an interactive football shirt catalog built using **HTML**, **CSS**, and **JavaScript**. The goal of the project is to showcase a collection of football shirts, allowing users to browse by league in a visually engaging and user-friendly way.
 
 ## ✨ Features
 
 - Display of football shirts in a grid layout  
-- Filters by club, season, color, or style  
 - Hover effects on catalog items  
 - Responsive design for mobile and desktop  
 
